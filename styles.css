@@ -1,0 +1,126 @@
+@font-face {
+ font-family: 'Iosevka Custom';
+ src: url('./assets/fonts/IosevkaCustom-Regular.ttf');
+}
+
+:root {
+ background: #272e33;
+ color: #d3c6aa;
+ font-family: 'Iosevka Custom', monospace;
+}
+
+body {
+ display: grid;
+ grid-template-rows: 5rem 1fr 5rem;
+ min-height: 98vh;
+}
+
+header {
+ text-align: center;
+}
+
+#about-me {
+ grid-area: about-me;
+}
+
+#recommended {
+ grid-area: recommended;
+}
+
+#public-projects {
+ grid-area: public-projects;
+}
+
+#other {
+ grid-area: other;
+}
+
+main {
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ grid-template-rows: 10rem 10rem 14rem;
+ grid-template-areas: 
+  "about-me recommended"
+  "public-projects recommended"
+  "other recommended";
+ padding: 0 6vmin 0 6vmin;
+}
+
+#email {
+ grid-area: email;
+}
+
+#mastodon {
+ grid-area: mastodon;
+}
+
+#lemmy {
+ grid-area: lemmy;
+}
+
+#patreon {
+ grid-area: patreon;
+}
+
+#kofi {
+ grid-area: kofi;
+}
+
+#paypal {
+ grid-area: paypal;
+}
+
+#sourcehut {
+ grid-area: sourcehut;
+}
+
+#codeberg {
+ grid-area: codeberg;
+}
+
+#github {
+ grid-area: github;
+}
+
+footer {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr;
+ grid-template-areas:
+  "email sourcehut paypal"
+  "mastodon codeberg kofi"
+  "lemmy github patreon";
+ color: #98971a;
+ text-align: center;
+ align-content: center;
+}
+
+a {
+ color: #7fbbb3;
+}
+
+a:hover {
+ color: #384b55;
+}
+
+h3 {
+ color: #dbbc7f;
+}
+
+@media only screen and (max-width: 1000px) {
+ main {
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+ }
+}
+
+@media only screen and (max-width: 700px) {
+ main {
+  grid-template-columns: 1fr;
+  grid-template-rows: 10rem 10rem 20rem 1fr;
+  grid-template-areas: 
+   "about-me"
+   "public-projects"
+   "other"
+   "recommended";
+ }
+}
